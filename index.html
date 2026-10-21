@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سباق المعرفة</title>
+  <title>لطفي شيخ زيد كيلاني | سباق المعرفة</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
   <main class="app-shell">
@@ -26,9 +27,10 @@
         </div>
         <div class="brand-block">
           <span class="eyebrow">لعبة تعليم أساسيات الحاسوب</span>
-          <h1>سباق المعرفة</h1>
+          <h1>تحدّي لطفي<span>سباق المعرفة</span></h1>
           <p>لعبة ممتعة لطلاب الإعدادي: اركض، اجمع العملات، وحل كل أسئلة الحاسوب قبل انتهاء الوقت.</p>
-          <strong class="author-credit">بإعداد رماء محاجنه</strong>
+          <strong class="author-credit">بإعداد لطفي شيخ زيد كيلاني</strong>
+          <div class="mission-meta"><span>04:00 <small>دقائق للتحدّي</small></span><span>3 <small>مسارات للمغامرة</small></span><span>3 <small>فرص للطاقة</small></span></div>
         </div>
       </div>
       <div class="player-card">
@@ -36,7 +38,13 @@
         <input id="playerName" type="text" maxlength="18" placeholder="اكتب اسمك هنا" required aria-required="true">
         <small id="nameHint">لا يمكن بدء اللعبة بدون كتابة الاسم</small>
       </div>
-      <div class="rules-card">
+      <div class="menu-actions start-actions">
+        <button id="startBtn" class="primary-btn">ابدأ المغامرة ←</button>
+        <button id="leaderboardBtn" class="ghost-btn">🏆 لوحة المتصدرين</button>
+        <button id="teacherBtn" class="ghost-btn">وضع المعلم</button>
+      </div>
+      <details class="rules-card">
+        <summary>كيف تلعب؟ <span>عرض قواعد المغامرة</span></summary>
         <h2>قواعد اللعبة</h2>
         <ul>
           <li>استخدم الأسهم يمين ويسار للتنقل بين 3 مسارات.</li>
@@ -49,12 +57,7 @@
           <li>عندك 4 دقائق فقط، وإذا انتهى الوقت قبل حل كل الأسئلة تنتهي الجولة.</li>
           <li>لو فزت، سيظهر في لوحة المتصدرين أنك حللت كل الأسئلة.</li>
         </ul>
-      </div>
-      <div class="menu-actions">
-        <button id="startBtn" class="primary-btn">ابدأ الركض</button>
-        <button id="leaderboardBtn" class="ghost-btn">لوحة المتصدرين</button>
-        <button id="teacherBtn" class="ghost-btn">وضع المعلم</button>
-      </div>
+      </details>
       <div class="controls-card">
         <span>طريقة اللعب</span>
         <p>الأسهم يمين/يسار لتغيير المسار، أعلى للقفز، أسفل للانزلاق. على الهاتف استخدم السحب. تبدأ غنوية حماسية مع بداية اللعب.</p>
