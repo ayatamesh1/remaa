@@ -677,12 +677,27 @@ ui.teacherForm.addEventListener("submit", event => {
 ui.playerName.value = localStorage.getItem(STORAGE.playerName) || "";
 
 window.addEventListener("keydown", event => {
+  if (event.target instanceof HTMLElement && event.target.matches("input, textarea, select")) {
+    if (event.key === "Enter" && event.target === ui.playerName) startGame();
+    return;
+  }
+  if (state.running && ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", " "].includes(event.key)) event.preventDefault();
   if (event.key === "ArrowLeft") moveLane(-1);
   if (event.key === "ArrowRight") moveLane(1);
   if (event.key === "ArrowUp") jump();
   if (event.key === "ArrowDown") slide();
   if (event.key.toLowerCase() === "p") state.paused ? resumeGame() : pauseGame(true);
   if (event.key === "Escape" && state.running) pauseGame(true);
+});
+
+document.querySelectorAll("[data-action]").forEach(button => {
+  button.addEventListener("click", () => {
+    const action = button.dataset.action;
+    if (action === "left") moveLane(-1);
+    if (action === "right") moveLane(1);
+    if (action === "jump") jump();
+    if (action === "slide") slide();
+  });
 });
 
 ui.gameWorld.addEventListener("touchstart", event => {

@@ -10,38 +10,21 @@
 <body>
   <main class="app-shell">
     <section id="startScreen" class="screen screen-active menu-screen">
+      <header class="lobby-nav"><a class="wordmark" href="index.html"><span class="logo-mark">ل</span> عالم لطفي<span class="wordmark-dot">.</span></a><span class="nav-tag">العب. تعلّم. تصدّر.</span><span class="edition">KNOWLEDGE RUN / 01</span></header>
       <div class="start-hero">
-        <div class="hero-track-art">
-          <div class="hero-runner">
-            <span class="hero-cap"></span>
-            <span class="hero-face"></span>
-            <span class="hero-body"></span>
-            <span class="hero-leg hero-leg-a"></span>
-            <span class="hero-leg hero-leg-b"></span>
-          </div>
-          <div class="hero-student">
-            <span></span>
-          </div>
-          <div class="hero-device"></div>
-          <div class="hero-rails"></div>
-        </div>
+        <div class="hero-track-art"><img src="adventure.svg" alt="عالم ألعاب بنفسجي فيه مسار سباق وعملات وبطل مغامر"><span class="art-label"><i></i> مغامرتك تبدأ من هنا</span></div>
         <div class="brand-block">
-          <span class="eyebrow">لعبة تعليم أساسيات الحاسوب</span>
-          <h1>تحدّي لطفي<span>سباق المعرفة</span></h1>
-          <p>لعبة ممتعة لطلاب الإعدادي: اركض، اجمع العملات، وحل كل أسئلة الحاسوب قبل انتهاء الوقت.</p>
+          <span class="eyebrow">✦ جاهز لتحدّي جديد؟</span>
+          <h1>اركض بسرعة.<br><span>فكّر أسرع!</span></h1>
+          <p>ادخل عالم لطفي، اجمع العملات وافتح بوابات المعرفة. كل إجابة صحيحة تقرّبك من الفوز.</p>
           <strong class="author-credit">بإعداد لطفي شيخ زيد كيلاني</strong>
           <div class="mission-meta"><span>04:00 <small>دقائق للتحدّي</small></span><span>3 <small>مسارات للمغامرة</small></span><span>3 <small>فرص للطاقة</small></span></div>
         </div>
       </div>
-      <div class="player-card">
-        <label for="playerName">اسم اللاعب <strong>إجباري</strong></label>
-        <input id="playerName" type="text" maxlength="18" placeholder="اكتب اسمك هنا" required aria-required="true">
-        <small id="nameHint">لا يمكن بدء اللعبة بدون كتابة الاسم</small>
-      </div>
-      <div class="menu-actions start-actions">
-        <button id="startBtn" class="primary-btn">ابدأ المغامرة ←</button>
-        <button id="leaderboardBtn" class="ghost-btn">🏆 لوحة المتصدرين</button>
-        <button id="teacherBtn" class="ghost-btn">وضع المعلم</button>
+      <div class="lobby-bottom">
+        <section class="launch-card"><span class="section-number">01 / انطلق</span><h2>دورك تصير البطل.</h2><p>اكتب اسمك وخلي المغامرة تبدأ.</p><div class="player-card"><label for="playerName">اسم اللاعب</label><input id="playerName" type="text" maxlength="24" placeholder="شو اسم البطل؟" autocomplete="nickname" required aria-required="true" aria-describedby="nameHint"><small id="nameHint" aria-live="polite">اسمك رح يظهر في لوحة المتصدرين</small></div><button id="startBtn" class="primary-btn">يلا نلعب <span>↖</span></button></section>
+        <section class="guide-card"><span class="section-number">02 / خطّة الفوز</span><h2>ثلاث خطوات. مغامرة كبيرة.</h2><div class="guide-step"><span>↔</span><div><h3>اختار مسارك</h3><p>تحرّك بالأسهم، أو اسحب على الموبايل.</p></div></div><div class="guide-step"><span>✦</span><div><h3>اجمع وارتقِ</h3><p>العملات والطاقة تزيد نقاطك.</p></div></div><div class="guide-step"><span>?</span><div><h3>افتح بوابات المعرفة</h3><p>جاوب صح على أسئلة الحاسوب لتفوز.</p></div></div></section>
+        <section class="explore-card"><span class="section-number">03 / أكثر من جولة</span><h2>مين قدّ التحدّي؟</h2><div class="trophy-art" aria-hidden="true">♜<span>★</span></div><button id="leaderboardBtn" class="ghost-btn">لوحة المتصدرين <span>↖</span></button><button id="teacherBtn" class="text-btn">للمعلّم: أضف أسئلتك ←</button></section>
       </div>
       <details class="rules-card">
         <summary>كيف تلعب؟ <span>عرض قواعد المغامرة</span></summary>
@@ -58,10 +41,7 @@
           <li>لو فزت، سيظهر في لوحة المتصدرين أنك حللت كل الأسئلة.</li>
         </ul>
       </details>
-      <div class="controls-card">
-        <span>طريقة اللعب</span>
-        <p>الأسهم يمين/يسار لتغيير المسار، أعلى للقفز، أسفل للانزلاق. على الهاتف استخدم السحب. تبدأ غنوية حماسية مع بداية اللعب.</p>
-      </div>
+      <footer class="lobby-footer"><span>لطفي شيخ زيد كيلاني · سباق المعرفة</span><span>قليل من التركيز، كثير من المتعة ✦</span></footer>
     </section>
 
     <section id="gameScreen" class="screen">
@@ -76,6 +56,7 @@
       </div>
 
       <div id="gameWorld" class="game-world">
+        <div class="world-sun"></div><div class="world-caption">عالم لطفي <span>سباق المعرفة</span></div>
         <div class="skyline"></div>
         <div id="particles" class="particles"></div>
         <div class="track">
@@ -95,11 +76,12 @@
         <div id="entities" class="entities"></div>
         <div id="countdown" class="countdown hidden">3</div>
       </div>
+      <div class="play-controls" aria-label="أزرار التحكّم"><button type="button" data-action="left" aria-label="يسار">←</button><button type="button" data-action="jump" aria-label="قفز">↑ <small>قفز</small></button><button type="button" data-action="slide" aria-label="انزلاق">↓ <small>انزلاق</small></button><button type="button" data-action="right" aria-label="يمين">→</button></div>
     </section>
 
     <section id="pauseMenu" class="overlay hidden">
       <div class="dialog">
-        <h2>إيقاف مؤقت</h2>
+        <span class="dialog-symbol" aria-hidden="true">Ⅱ</span><h2>خذ نَفَس…</h2>
         <p>المدينة الرقمية تنتظرك. هل أنت جاهز تكمل؟</p>
         <button id="resumeBtn" class="primary-btn">متابعة</button>
         <button id="restartFromPauseBtn" class="ghost-btn">إعادة اللعب</button>
@@ -109,17 +91,17 @@
 
     <section id="questionModal" class="overlay hidden">
       <div class="dialog question-dialog">
-        <span class="eyebrow">بوابة تعليمية</span>
+        <span class="eyebrow">✦ بوابة المعرفة</span>
         <h2>ما اسم جهاز الحاسوب هذا؟</h2>
         <div id="deviceImage" class="device-image" aria-label="صورة جهاز حاسوب"></div>
         <div id="answerButtons" class="answers"></div>
-        <p id="questionFeedback" class="feedback"></p>
+        <p id="questionFeedback" class="feedback" aria-live="polite"></p>
       </div>
     </section>
 
     <section id="gameOverScreen" class="screen menu-screen">
       <div class="brand-block">
-        <span class="eyebrow">انتهت الجولة</span>
+        <span class="dialog-symbol" aria-hidden="true">⚑</span><span class="eyebrow">كل جولة بداية جديدة</span>
         <h1>انتهت اللعبة</h1>
         <p id="finalStats">النقاط: 0</p>
       </div>
@@ -132,7 +114,7 @@
 
     <section id="leaderboardScreen" class="screen menu-screen">
       <div class="brand-block">
-        <span class="eyebrow">محفوظة على جهازك</span>
+        <span class="dialog-symbol" aria-hidden="true">★</span><span class="eyebrow">أبطال عالم لطفي · النتائج محفوظة على جهازك</span>
         <h1>لوحة المتصدرين</h1>
       </div>
       <ol id="leaderboardList" class="leaderboard-list"></ol>
@@ -146,13 +128,13 @@
       <div class="brand-block">
         <span class="eyebrow">وضع المعلم</span>
         <h1>أسئلة مخصصة</h1>
-        <p>أضف أسئلة جديدة عن أجهزة الحاسوب. يمكن وضع رابط صورة أو تركه فارغاً لإنشاء أيقونة تلقائية.</p>
+        <p>اصنع تحدّياً لطلابك. أضف اسم الجهاز وصورته وإجابتين خاطئتين.</p>
       </div>
       <form id="teacherForm" class="teacher-form">
-        <input id="teacherAnswer" type="text" placeholder="الإجابة الصحيحة، مثال: الماسح الضوئي" required>
-        <input id="teacherImage" type="text" placeholder="رابط صورة الجهاز من الإنترنت" required>
-        <input id="teacherWrong1" type="text" placeholder="اختيار خاطئ 1" required>
-        <input id="teacherWrong2" type="text" placeholder="اختيار خاطئ 2" required>
+        <label for="teacherAnswer">اسم الجهاز الصحيح</label><input id="teacherAnswer" type="text" placeholder="مثلاً: الماسح الضوئي" required>
+        <label for="teacherImage">رابط صورة الجهاز</label><input id="teacherImage" type="url" placeholder="https://…" dir="ltr" required>
+        <label for="teacherWrong1">الإجابة الخاطئة الأولى</label><input id="teacherWrong1" type="text" placeholder="مثلاً: الشاشة" required>
+        <label for="teacherWrong2">الإجابة الخاطئة الثانية</label><input id="teacherWrong2" type="text" placeholder="مثلاً: الطابعة" required>
         <button class="primary-btn" type="submit">إضافة السؤال</button>
       </form>
       <div id="customQuestionList" class="custom-list"></div>
